@@ -25,9 +25,10 @@ export class RamiroComponent implements OnInit {
       console.log('DATOS CORRECTOS');
       console.log(res);
       this.valorservicio = res;
-    },(err: any)=>{
+    },(err: HttpErrorResponse)=>{
       console.log('Ocurrio un error');
-      //alert(err.error);
+      alert(err.message);
+      console.log(err.status);
     });
 
   }
