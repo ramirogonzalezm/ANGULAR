@@ -21,10 +21,11 @@ export class RamiroComponent implements OnInit {
   getSaludo(){
     console.log('Entraria a la funcion del servicio');
     //alert('ALERTAS DE AVISO');
-    this.saludoService.get_Saludo().subscribe((res : Saludo)=>{
+    this.saludoService.get_Saludo().subscribe((res : any)=>{
       console.log('DATOS CORRECTOS');
-      console.log(res);
-      this.valorservicio = res;
+      console.log(res.descripcion);
+      //console.log(res.body.respuesta.valor);
+      this.valorservicio = res.descripcion;
     },(err: HttpErrorResponse)=>{
       console.log('Ocurrio un error');
       alert(err.message);

@@ -13,8 +13,8 @@ export class SaludoService {
   constructor(private http:HttpClient) { }
 
   //metodo para obtener los datos del API
-  get_Saludo(): Observable<Saludo>{
-    const url = this.baseURL+'/valores';
-    return this.http.get<Saludo>(url);
+  get_Saludo(): Observable<any>{
+    const url = this.baseURL+'/saludo';
+    return this.http.get<any>(url);
   }
 }
