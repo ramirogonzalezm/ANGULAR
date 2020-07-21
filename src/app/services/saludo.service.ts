@@ -8,7 +8,8 @@ import { Saludo } from '../model/saludo';
   providedIn: 'root'
 })
 export class SaludoService {
-  baseURL = 'http://localhost:8080/ServiciosRest-0.0.1-SNAPSHOT';
+  baseURL = 'http://localhost:8080';
+  //baseURL = 'http://localhost:8080/ServiciosRest-0.0.1-SNAPSHOT';
 
   constructor(private http:HttpClient) { }
 
